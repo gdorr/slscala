@@ -17,7 +17,7 @@ class PostcodesController @Inject() extends Controller {
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def postcodes = Action {
-    Ok(views.html.postcodes("Your new application is ready."))
+  def postcodes (x: String) = Action {
+    Ok(views.html.postcodes("Your new application is ready. "+x))
   }
 }
