@@ -21,3 +21,4 @@ class PostcodesController @Inject() extends Controller {
     Ok(views.html.postcodes("Your new application is ready. "+x))
   }
 }
+ 
