@@ -1,24 +1,25 @@
 package controllers
 
 import javax.inject._
+import socialLandlordDatabase._
 import play.api._
 import play.api.mvc._
+import play.api.libs.ws._
+import socialLandlordDatabase._
+import play.api.libs.json._
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 
-/**
- * This controller creates an `Action` to handle HTTP requests to the
- * application's home page.
- */
 @Singleton
-class PostcodesController @Inject() extends Controller {
+class PostcodesController extends Controller {
 
-  /**
-   * Create an Action to render an HTML page with a welcome message.
-   * The configuration in the `routes` file means that this method
-   * will be called when the application receives a `GET` request with
-   * a path of `/`.
-   */
-  def postcodes (x: String) = Action {
-    Ok(views.html.postcodes("Your new application is ready. "+x))
+  @Inject var ws: WSClient = null
+
+  def postcodes(pcode: String)  = Action { implicit request =>
+    {
+      println("Call: "+pcode)
+      ws.url("https://mapit.mysociety.org/postcode/bb53ae").get().map(r => println(r.json \ "shortcuts" \ "council" \ "district"))  
+      Ok(views.html.postcodes(socLordDB.getFiltered("Hyndburn")))
+    }
   }
 }
  
