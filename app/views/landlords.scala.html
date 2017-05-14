@@ -1,0 +1,50 @@
+@* postcodes Template File *@
+@import socialLandlordDatabase._
+@import scala.collection.mutable._
+
+@(param: ListBuffer[landlord])
+
+ <div class="container-fluid">
+
+	<div class="row">
+	
+	    <div class="col-lg-12">
+	
+	        <div class="panel-group" id="landlordlist">
+	            <div class="panel panel-primary">
+	            
+	            	@for(p <- param) {
+		                <div class="panel-heading">
+		                    <h3 class="panel-title">
+		                        @p.Landlord
+		                    </h3>
+		                </div>
+		                <div class="panel-body">
+						    @p.RPCode<br />
+						    @p.RegAddr(0)<br />
+						    @p.RegAddr(1)<br />
+						    @p.RegAddr(2)<br />
+						    @p.RegAddr(3)<br />
+						    @p.RegAddr(4)<br />
+						    @p.Postcode<br />
+						    @p.Phone<br />
+						    @p.Designation<br />
+						    @p.RegDate<br />
+						    @p.LegalEntity<br />
+						    @p.Country<br />
+						    @p.UCLSEmail<br />
+						    @p.UCFSEmai<br />
+						    @p.FirstContact<br />
+						    @p.Email
+		            
+		                </div>
+						
+					}
+				
+	            
+	            </div>
+	        </div>
+	    </div>
+		
+	</div>
+</div>

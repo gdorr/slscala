@@ -3,11 +3,13 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET     /                           controllers.LocalAuthorityController.findla
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 # An example controller showing a sample home page
-GET     /postcodes/:pcode			controllers.PostcodesController.postcodes(pcode: String)
+GET     /landlords/:llord			controllers.LandlordsController.landlords(llord: String)
+
+GET     /la			controllers.LocalAuthorityController.findla
  
