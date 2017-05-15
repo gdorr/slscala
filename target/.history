@@ -4,3 +4,5 @@ exit
 sbt run
 run
 exit
+playGenerateSecret
+exit

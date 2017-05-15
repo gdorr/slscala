@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/gdo/workspace/soclordsscala/conf/logback.xml,/home/gdo/workspace/soclordsscala/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/gdo/workspace/soclordsscala/conf/routes,/home/gdo/workspace/soclordsscala/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/gdo/workspace/soclordsscala/conf/application.conf,/home/gdo/workspace/soclordsscala/target/scala-2.11/classes/application.conf)[0m

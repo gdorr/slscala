@@ -1,9 +1,10 @@
-	@* la Template File *@
+@* la Template File *@
 @import socialLandlordDatabase._
 @import scala.collection.mutable._
 
 @(param: String)
 	
+@main {
 <div class="container-fluid">
 
 	<div class="row">
@@ -29,14 +30,6 @@
 	        </div>
 	    </div>
 	</div>
-	<div class="row">
-	    <div class="col-lg-12">
-	    <ul>
-	    @for(p->param) {
-	    	<li>@p.name</li>
-	    	}
-	    </ul>
-		</div>
-	</div>
 
 </div>
+}

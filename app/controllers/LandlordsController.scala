@@ -17,9 +17,10 @@ class LandlordsController extends Controller {
   def landlords(llord: String)  = Action { implicit request =>
     {
       //ws.url("https://mapit.mysociety.org/postcode/bb53ae").get().map(r => println(r.json \ "shortcuts" \ "council" \ "district"))  
-      println("LORD: "+llord)
-      
-      Ok(views.html.header(views.html.landlords(socLordDB.getFiltered("Hyndburn"))))
+
+      var ss: String=llord.toUpperCase().replaceFirst("BOROUGH COUNCIL", "").replaceFirst("DISTRICT COUNCIL", "").trim()
+      println("LORD: "+ss)
+      Ok(views.html.landlords(socLordDB.getFiltered(ss)))
     }
   }
 }

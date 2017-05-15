@@ -19,7 +19,7 @@ class LocalAuthorityController extends Controller {
       println("Call: ")
       println("Raw: "+request.headers)
       //ws.url("https://mapit.mysociety.org/postcode/bb53ae").get().map(r => println(r.json \ "shortcuts" \ "council" \ "district")) 
-      Ok(views.html.header(views.html.localauthority("d")))
+      Ok(views.html.localauthority("d"))
       
     }
   }

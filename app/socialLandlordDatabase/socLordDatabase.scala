@@ -30,46 +30,53 @@ class localAuthority {
   var TotalHousingStock: String=""
 }
 
+
+  
 @Singleton object socLordDB {
   var socLords: ListBuffer[landlord]=ListBuffer()
   var localAuthorities: ListBuffer[localAuthority]=ListBuffer()
   prepare()
   
+ 
+  def procstr(s: String): String = {
+    return s.stripPrefix("\"").stripSuffix("\"").toUpperCase()
+}
+
   def prepare() = {
     scala.io.Source.fromFile("uc-landlords.txt").getLines().drop(1).foreach ( l => {
       var newl=new landlord()
       var i = l.split(",")
-        newl.ID=i(0).stripPrefix("\"").stripSuffix("\"")
-        newl.Landlord=i(1).stripPrefix("\"").stripSuffix("\"")
-        newl.RPCode=i(2).stripPrefix("\"").stripSuffix("\"")
-        newl.RegAddr(0)=i(3).stripPrefix("\"").stripSuffix("\"")
-        newl.RegAddr(1)=i(4).stripPrefix("\"").stripSuffix("\"")
-        newl.RegAddr(2)=i(5).stripPrefix("\"").stripSuffix("\"")
-        newl.RegAddr(3)=i(6).stripPrefix("\"").stripSuffix("\"")
-        newl.RegAddr(4)=i(7).stripPrefix("\"").stripSuffix("\"")
-        newl.Postcode=i(8).stripPrefix("\"").stripSuffix("\"")
-        newl.Phone=i(9).stripPrefix("\"").stripSuffix("\"")
-        newl.Designation=i(10).stripPrefix("\"").stripSuffix("\"")
-        newl.RegDate=i(11).stripPrefix("\"").stripSuffix("\"")
-        newl.LegalEntity=i(12).stripPrefix("\"").stripSuffix("\"")
-        newl.Country=i(13).stripPrefix("\"").stripSuffix("\"")
-        newl.UCLSEmail=i(14).stripPrefix("\"").stripSuffix("\"")
-        newl.UCFSEmai=i(15).stripPrefix("\"").stripSuffix("\"")
-        newl.FirstContact=i(16).stripPrefix("\"").stripSuffix("\"")
-        newl.Email=i(17).stripPrefix("\"").stripSuffix("\"")
+        newl.ID=procstr(i(0))
+        newl.Landlord=procstr(i(1))
+        newl.RPCode=procstr(i(2))
+        newl.RegAddr(0)=procstr(i(3))
+        newl.RegAddr(1)=procstr(i(4))
+        newl.RegAddr(2)=procstr(i(5))
+        newl.RegAddr(3)=procstr(i(6))
+        newl.RegAddr(4)=procstr(i(7))
+        newl.Postcode=procstr(i(8))
+        newl.Phone=procstr(i(9))
+        newl.Designation=procstr(i(10))
+        newl.RegDate=procstr(i(11))
+        newl.LegalEntity=procstr(i(12))
+        newl.Country=procstr(i(13))
+        newl.UCLSEmail=procstr(i(14))
+        newl.UCFSEmai=procstr(i(15))
+        newl.FirstContact=procstr(i(16))
+        newl.Email=procstr(i(17))
         socLords+=newl
       })
       
       scala.io.Source.fromFile("uc-LocalAuthorities.txt").getLines().drop(1).foreach ( l => {
         var newl=new localAuthority()
         var i = l.split(",")
-          newl.ID=i(0).stripPrefix("\"").stripSuffix("\"")
-          newl.TA=i(1).stripPrefix("\"").stripSuffix("\"")
-          newl.PossiblePRPName=i(2).stripPrefix("\"").stripSuffix("\"")
-          newl.RegisterPRPName=i(3).stripPrefix("\"").stripSuffix("\"")
-          newl.PRPregistrationNumber=i(4).stripPrefix("\"").stripSuffix("\"")
-          newl.LocalAuthority=i(5).stripPrefix("\"").stripSuffix("\"")
-          newl.TotalHousingStock=i(6).stripPrefix("\"").stripSuffix("\"")
+          newl.ID=procstr(i(0))
+          newl.TA=procstr(i(1))
+          newl.PossiblePRPName=procstr(i(2))
+          newl.RegisterPRPName=procstr(i(3))
+          newl.PRPregistrationNumber=procstr(i(4))
+          newl.LocalAuthority=procstr(i(5))
+          newl.TotalHousingStock=procstr(i(6))
           localAuthorities+=newl
       })
     }
