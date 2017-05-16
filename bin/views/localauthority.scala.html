@@ -4,13 +4,16 @@
 
 @(param: String)
 	
-@main {
+@header {
 <div class="container-fluid">
 
 	<div class="row">
 	    <div class="col-lg-12">
+	    <form>
 	        Enter your home postcode
-	        <input type="text" id="dataentry" /><button onclick="searchforLA_clicked()">Search <span class="glyphicon glyphicon-search"></span></button>	
+	        <input type="text" id="dataentry" />
+	        <button id="search" type="button" class="btn btn-primary"  onclick="searchforLA_clicked()">Search <span class="glyphicon glyphicon-search"></span></button>
+	        </form>	
 	    </div>
 	</div>
 	

@@ -33,8 +33,11 @@ Seq[Any](format.raw/*5.17*/("""
 
 	<div class="row">
 	    <div class="col-lg-12">
+	    <form>
 	        Enter your home postcode
-	        <input type="text" id="dataentry" /><button onclick="searchforLA_clicked()">Search <span class="glyphicon glyphicon-search"></span></button>	
+	        <input type="text" id="dataentry" />
+	        <button id="search" type="button" class="btn btn-primary"  onclick="searchforLA_clicked()">Search <span class="glyphicon glyphicon-search"></span></button>
+	        </form>	
 	    </div>
 	</div>
 	
@@ -77,9 +80,9 @@ Seq[Any](format.raw/*5.17*/("""
 object localauthority extends localauthority_Scope0.localauthority_Scope1.localauthority
               /*
                   -- GENERATED --
-                  DATE: Mon May 15 17:04:58 BST 2017
+                  DATE: Tue May 16 17:03:15 BST 2017
                   SOURCE: /home/gdo/workspace/soclordsscala/app/views/localauthority.scala.html
-                  HASH: 7e0902e3b195c826c33bfa10f4e78dfc6c80b649
+                  HASH: 45b5e43b6e43e4c084b0947d5ba3bdb2a7e3260a
                   MATRIX: 648->93|758->108|787->112|800->118|839->120|866->121
                   LINES: 24->5|29->5|31->7|31->7|31->7|32->8
                   -- GENERATED --

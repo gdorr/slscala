@@ -26,6 +26,7 @@ Seq[Any](format.raw/*1.17*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
 <head>
+   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -36,6 +37,7 @@ Seq[Any](format.raw/*1.17*/("""
 	<script src="/assets/javascript/code.js"></script>
     <link rel="stylesheet" href="/assets/stylesheets/mycss.css" />
 
+	<title>Social landlords</title>
 </head>
 
 <body>
@@ -48,7 +50,7 @@ Seq[Any](format.raw/*1.17*/("""
 		            <div class="col-lg-2">
 		
 		                <div class="navbar-header">
-		                    <img class="navbar-text" width="90" src="/assets/images/logo.png" alt "DWP logo" />
+		                    <img class="navbar-text" width="90" src="/assets/images/logo.png" alt="DWP logo" />
 		
 		                </div>
 		            </div>
@@ -56,7 +58,7 @@ Seq[Any](format.raw/*1.17*/("""
 		            </div>
 		            <div class="col-lg-4">
 		                <div class="btn-group">
-		                    <button type="button" class="btn btn-primary">About</button>
+		                    <button type="button" class="btn btn-primary" onclick="alert('hello')">About</button>
 		                    <button type="button" class="btn btn-primary">Contact us</button>
 		                    <button type="button" class="btn btn-primary">Help</button>
 		                </div>
@@ -67,14 +69,14 @@ Seq[Any](format.raw/*1.17*/("""
 		</div>
 
 		<div class="row">
-			"""),_display_(/*46.5*/content),format.raw/*46.12*/("""
-		"""),format.raw/*47.3*/("""</div>
+			"""),_display_(/*48.5*/content),format.raw/*48.12*/("""
+		"""),format.raw/*49.3*/("""</div>
 	</div>
 	
     <script>
-        $(document).ready(function() """),format.raw/*51.38*/("""{"""),format.raw/*51.39*/("""
+        $(document).ready(function() """),format.raw/*53.38*/("""{"""),format.raw/*53.39*/("""
 
-        """),format.raw/*53.9*/("""}"""),format.raw/*53.10*/(""");
+        """),format.raw/*55.9*/("""}"""),format.raw/*55.10*/(""");
 
     </script>
 </body>
@@ -98,11 +100,11 @@ Seq[Any](format.raw/*1.17*/("""
 object header extends header_Scope0.header
               /*
                   -- GENERATED --
-                  DATE: Sun May 14 16:03:41 BST 2017
+                  DATE: Tue May 16 16:33:22 BST 2017
                   SOURCE: /home/gdo/workspace/soclordsscala/app/views/header.scala.html
-                  HASH: 15cd477c42f2c8abc5886714b77689bb1e968e2c
-                  MATRIX: 527->1|637->16|664->17|2118->1445|2146->1452|2176->1455|2271->1522|2300->1523|2337->1533|2366->1534
-                  LINES: 20->1|25->1|26->2|70->46|70->46|71->47|75->51|75->51|77->53|77->53
+                  HASH: 888c1f3bc30b646a3a4f168e9b1ef3f3cc4d7a91
+                  MATRIX: 527->1|637->16|664->17|2246->1573|2274->1580|2304->1583|2399->1650|2428->1651|2465->1661|2494->1662
+                  LINES: 20->1|25->1|26->2|72->48|72->48|73->49|77->53|77->53|79->55|79->55
                   -- GENERATED --
               */
           

@@ -9,11 +9,13 @@ var getLAFromPostcode = function(pcode) {
 		mylist+='<li><a href="/landlords/'+encodeURI(y)+'">'+y+'</a></li>'
 		//var y=data.areas[data.shortcuts.council.county].name
 		//mylist+='<li><a href="/landlords/'+encodeURI(y)+'">'+y+'</a></li>'
+		$("#localauthority").empty()
 		$("#localauthority").append(mylist+"</ul>")
 	});
 }
 
 var searchforLA_clicked = function () {
+	$("#localauthority").append("<h3>Searching</h3>")
 	var data=$('#dataentry').val()
 	getLAFromPostcode(data)
 }
